@@ -1,6 +1,8 @@
 import React from "react";
+import Cart from "./CartWidget";
 import logotipo_secundario from "../Assets/Img/logotipo_secundario.png";
-import carrito_de_compras from "../Assets/Img/carrito_de_compras.png"
+
+
 
 
 const Navbar = () => { return (
@@ -29,10 +31,8 @@ const Navbar = () => { return (
           <li><a className="dropdown-item" href="#">Regalos</a></li>
         </ul>
       </li>
-      <li className="navbar ">
-        <a href="#">
-        <img src={carrito_de_compras} alt="" width="30" height="30" />
-        </a>
+      <li className="cart">
+        <Cart/>
       </li>
     </ul>
   </div>
