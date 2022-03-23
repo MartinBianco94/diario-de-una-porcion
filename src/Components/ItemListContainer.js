@@ -1,7 +1,13 @@
 import React from "react";
+import Card from "./Cards";
+
+   
 
 function ItemListContainer (){ return(
-    <h1>Productos</h1>
+<div>
+<h1>Productos</h1>
+<Card />
+</div>
 )
 }
 
