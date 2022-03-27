@@ -1,11 +1,11 @@
 import React from "react";
-import Comprar from "./ItemCount";
+import ItemCount from "./ItemCount"
 import alfajores_brownie from "../Assets/Img/alfajores_brownie.jpg"
+
 
 const stock = 10
 const initial = 1
 const onAdd = () =>{
-     
 }
 
 const Card = () => {return(
@@ -14,7 +14,7 @@ const Card = () => {return(
     <div className="card-body">
       <h5 className="card-title">Alfajodes de Brownie</h5>
       <p className="card-text"></p>
-      <Comprar
+      <ItemCount
       stock={stock}
       initial={initial}
       onAdd={onAdd}

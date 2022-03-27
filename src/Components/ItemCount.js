@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-const Comprar = ({stock, initial, onAdd}) => {
+const ItemCount = ({stock, initial, onAdd}) => {
 const [Counter, setCounter]= useState(initial);
 
 const clickadd = () => {
@@ -37,4 +37,4 @@ return (
 )
 }
 
-export default Comprar;
+export default ItemCount;
