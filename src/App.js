@@ -20,11 +20,8 @@ function App() {
             path="/"
             element={<ItemListConteiner setProductId={setProductId} />}
           />
-          <Route
-            path="/"
-            element={<ItemDetailContainer productId={productId} />}
-          />
         </Routes>
+        <ItemDetailContainer productId={productId} />
       </div>
     </BrowserRouter>
   );
