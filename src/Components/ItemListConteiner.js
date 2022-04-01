@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import getProduct from "../Services/Product";
+import getProduct from "../Services/products";
 import ItemList from "./ItemList";
 
-const ItemListConteiner = () => {
+const ItemListConteiner = ({ setProductId }) => {
   const [productList, setListProducts] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const ItemListConteiner = () => {
 
   return (
     <div>
-      <ItemList productList={productList} />
+      <ItemList productList={productList} setProductId={setProductId} />
     </div>
   );
 };
