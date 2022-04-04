@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router";
 import getProduct from "../Services/products";
 import ItemDetail from "./ItemDetail";
 
-const ItemDetailContainer = ({ productId }) => {
-  const [product, setProduct] = useState({});
+const ItemDetailContainer = () => {
+  const [product, setProduct] = useState(null);
+
+  const { productId } = useParams;
 
   useEffect(() => {
     getProduct
-      .then((res) => setProduct(res.find((item) => item.id === productId)))
+      .then((res) => {
+        setProduct(res.find((item) => item.id === Number(productId)));
+      })
       .catch((error) => console.log(error));
   }, [productId]);
 

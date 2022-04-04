@@ -26,11 +26,29 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       <div>
         <h3>Comprar</h3>
         <h2>{Counter}</h2>
-        <button onClick={() => clickadd()}>Agregar item</button>
-        <button onClick={() => clickless()}>Sacar item</button>
-      </div>
-      <div>
-        <button onClick={() => addToCart("addto")}>Comprar</button>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button
+            type="button"
+            class="btn btn-primary"
+            onClick={() => clickadd()}
+          >
+            +
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onClick={() => addToCart("addto")}
+          >
+            Comprar
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onClick={() => clickless()}
+          >
+            -
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -1,15 +1,12 @@
 import React from "react";
 import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
 
 const stock = 10;
 const initial = 1;
 const onAdd = () => {};
 
 const Item = (props) => {
-  console.log(props.product);
-  const showMore = () => {
-    props.setProductId(props.product.id);
-  };
   return (
     <div className="card" style={{ width: "18rem" }}>
       <img
@@ -21,7 +18,11 @@ const Item = (props) => {
         <h5 className="card-title">{props.product.name}</h5>
         <p className="card-text">${props.product.price}</p>
         <ItemCount stock={stock} initial={initial} onAdd={onAdd} />
-        <button onClick={showMore}>Mas info</button>
+        <Link to={`/ItemDetail/${props.product.id}`}>
+          <button type="button" className="btn btn-secondary btn-sm">
+            Mas info
+          </button>
+        </Link>
       </div>
     </div>
   );
