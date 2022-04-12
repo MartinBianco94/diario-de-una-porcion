@@ -1,51 +1,25 @@
-import React, { useState } from "react";
-
-const ItemCount = ({ stock, initial, onAdd }) => {
-  const [Counter, setCounter] = useState(initial);
-
+const ItemCount = ({ max, Counter, setCounter, onAdd }) => {
   const clickadd = () => {
-    if (Counter === stock) {
-      return;
-    }
-    setCounter(Counter + 1);
+    Counter < max && setCounter(Counter + 1);
   };
 
   const clickless = () => {
-    if (Counter === initial) {
-      return;
-    }
-    setCounter(Counter - 1);
-  };
-
-  const addToCart = () => {
-    onAdd();
+    Counter > 1 && setCounter(Counter - 1);
   };
 
   return (
     <div>
       <div>
-        <h3>Comprar</h3>
+        <h3>Cantidad</h3>
         <h2>{Counter}</h2>
         <div class="btn-group" role="group" aria-label="Basic example">
-          <button
-            type="button"
-            class="btn btn-primary"
-            onClick={() => clickadd()}
-          >
+          <button type="button" class="btn btn-primary" onClick={clickadd}>
             +
           </button>
-          <button
-            type="button"
-            class="btn btn-primary"
-            onClick={() => addToCart("addto")}
-          >
-            Comprar
+          <button type="button" class="btn btn-primary" onClick={onAdd}>
+            Agregar al carrito
           </button>
-          <button
-            type="button"
-            class="btn btn-primary"
-            onClick={() => clickless()}
-          >
+          <button type="button" class="btn btn-primary" onClick={clickless}>
             -
           </button>
         </div>

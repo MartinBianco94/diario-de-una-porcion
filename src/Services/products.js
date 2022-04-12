@@ -9,7 +9,7 @@ const PRODUCTS = [
     price: 200,
     imageUrl: alfajores,
     description: "un hermoso alfajor de dulce de leche",
-    stock: 50,
+    stock: 2,
     category: "dulces",
   },
   {
