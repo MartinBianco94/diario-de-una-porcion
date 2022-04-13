@@ -1,7 +1,8 @@
 import React from "react";
-import Cart from "./CartWidget";
+import CartWidget from "./CartWidget";
 import logotipo_secundario from "../Assets/Img/logotipo_secundario.png";
 import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -64,7 +65,7 @@ const Navbar = () => {
               </ul>
             </li>
             <li className="cart">
-              <Cart />
+              <CartWidget />
             </li>
           </ul>
         </div>

@@ -20,7 +20,7 @@ const ItemListConteiner = ({ setProductId }) => {
       .catch((error) => console.log(error));
   }, [categoryId]);
 
-  console.log("desde el container", productList);
+  /*console.log("desde el container", productList);*/
 
   return (
     <div>

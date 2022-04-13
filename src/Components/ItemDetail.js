@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
 import ItemCount from "./ItemCount";
 import { useState } from "react";
+import { CartContext } from "./CartContext";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ product }) => {
+  const { cart, addItem, isInCart } = useContext(CartContext);
+
+  console.log(cart);
+
   const [Counter, setCounter] = useState(1);
 
-  const agregarAlCarrito = (Counter) => {
+  const agregarAlCarrito = () => {
     const itemToAdd = {
       id: product.id,
       name: product.name,
       stock: product.stock,
       image: product.imageUrl,
+      price: product.price,
       Counter,
     };
-    console.log(itemToAdd);
+
+    addItem(itemToAdd);
   };
   return (
     <div className="product-list">
@@ -25,13 +33,20 @@ const ItemDetail = ({ product }) => {
         />
         <div className="card-body">
           <h1 className="card-title">{product?.name}</h1>
+          <h3> $ {product?.price}</h3>
           <h5>{product?.description}</h5>
-          <ItemCount
-            max={product?.stock}
-            Counter={Counter}
-            setCounter={setCounter}
-            onAdd={agregarAlCarrito}
-          />
+          {!isInCart(product?.id) ? (
+            <ItemCount
+              max={product?.stock}
+              Counter={Counter}
+              setCounter={setCounter}
+              onAdd={agregarAlCarrito}
+            />
+          ) : (
+            <Link to="/cart" className="btn btn-success">
+              Terminar compra
+            </Link>
+          )}
         </div>
       </div>
     </div>
