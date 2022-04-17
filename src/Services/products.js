@@ -1,6 +1,8 @@
 import alfajores from "../Assets/Img/alfajores_brownie.jpg";
 import chipa from "../Assets/Img/pan_saborizado.jpg";
 import torta from "../Assets/Img/torta_vainilla.jpg";
+import bunuelos from "../Assets/Img/bunuelos_acelga.jpg";
+import pastaFrola from "../Assets/Img/pasta_frola.jpg";
 
 const PRODUCTS = [
   {
@@ -8,7 +10,7 @@ const PRODUCTS = [
     name: "alfajores",
     price: 200,
     imageUrl: alfajores,
-    description: "un hermoso alfajor de dulce de leche",
+    description: "un riquisimo alfajor de dulce de leche",
     stock: 2,
     category: "dulces",
   },
@@ -17,7 +19,7 @@ const PRODUCTS = [
     name: "chipa",
     price: 50,
     imageUrl: chipa,
-    description: "un hermosa masa rellena de queso",
+    description: "rellenos de queso",
     stock: 60,
     category: "salados",
   },
@@ -32,28 +34,28 @@ const PRODUCTS = [
   },
   {
     id: "4",
-    name: "torta",
+    name: "pasta frola",
     price: 230,
-    imageUrl: torta,
-    description: "torta riquisima de frutilla",
-    stock: 70,
+    imageUrl: pastaFrola,
+    description: "de membrillo o de batata, igual de rica",
+    stock: 0,
     category: "dulces",
   },
   {
     id: "5",
-    name: "torta",
+    name: "talitas",
     price: 230,
     imageUrl: torta,
-    description: "torta riquisima de frutilla",
+    description: "para untar o comer solo",
     stock: 70,
     category: "salados",
   },
   {
     id: "6",
-    name: "torta",
+    name: "bunuelos de acelga",
     price: 230,
-    imageUrl: torta,
-    description: "torta riquisima de frutilla",
+    imageUrl: bunuelos,
+    description: "bunuelos caseros de acelga",
     stock: 70,
     category: "salados",
   },
