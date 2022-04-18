@@ -6,16 +6,14 @@ import pastaFrola from "../Assets/Img/pasta_frola.jpg";
 
 const PRODUCTS = [
   {
-    id: "1",
     name: "alfajores",
     price: 200,
     imageUrl: alfajores,
     description: "un riquisimo alfajor de dulce de leche",
-    stock: 2,
+    stock: 10,
     category: "dulces",
   },
   {
-    id: "2",
     name: "chipa",
     price: 50,
     imageUrl: chipa,
@@ -24,7 +22,6 @@ const PRODUCTS = [
     category: "salados",
   },
   {
-    id: "3",
     name: "torta",
     price: 230,
     imageUrl: torta,
@@ -33,7 +30,6 @@ const PRODUCTS = [
     category: "dulces",
   },
   {
-    id: "4",
     name: "pasta frola",
     price: 230,
     imageUrl: pastaFrola,
@@ -42,7 +38,6 @@ const PRODUCTS = [
     category: "dulces",
   },
   {
-    id: "5",
     name: "talitas",
     price: 230,
     imageUrl: torta,
@@ -51,12 +46,11 @@ const PRODUCTS = [
     category: "salados",
   },
   {
-    id: "6",
     name: "bunuelos de acelga",
     price: 230,
     imageUrl: bunuelos,
     description: "bunuelos caseros de acelga",
-    stock: 70,
+    stock: 200,
     category: "salados",
   },
 ];

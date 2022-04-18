@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Nosotros from "./Components/Nosotros";
 import Cart from "./Components/Cart";
 import { CartProvider } from "./Components/CartContext";
+import Checkout from "./Components/Checkout";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/Nosotros" element={<Nosotros />} />
             <Route path="/Cart" element={<Cart />} />
+            <Route path="/Checkout" element={<Checkout />} />
             <Route path="/" element={<ItemListConteiner />} />
             <Route
               path="/category/:categoryId"

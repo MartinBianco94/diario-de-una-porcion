@@ -17,7 +17,7 @@ const ItemCount = ({ max, Counter, setCounter, onAdd }) => {
         <div class="btn-group" role="group" aria-label="Basic example">
           <button
             type="button"
-            class={`btn ${Counter < max ? "btn-primary" : "btn btn-disable"}`}
+            class={`btn ${Counter <= max ? "btn-primary" : "btn btn-disable"}`}
             onClick={clickadd}
             disabled={Counter === max}
           >
@@ -27,7 +27,7 @@ const ItemCount = ({ max, Counter, setCounter, onAdd }) => {
             type="button"
             class="btn btn-primary"
             onClick={onAdd}
-            disabled={Counter === max}
+            disabled={Counter > max}
           >
             Agregar al carrito
           </button>
