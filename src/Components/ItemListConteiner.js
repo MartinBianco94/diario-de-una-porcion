@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-/*import getProduct from "../Services/products";*/
 import { collection, getDocs } from "@firebase/firestore";
 import { query, where } from "@firebase/firestore";
 import { db } from "../firebase/config";
@@ -22,22 +21,6 @@ const ItemListConteiner = ({ setProductId }) => {
       setListProducts(items);
     });
   }, [categoryId]);
-
-  /*Sin utilizar Firebase*/
-
-  /* useEffect(() => {
-    getProduct
-      .then((res) => {
-        if (categoryId) {
-          setListProducts(res.filter((prod) => prod.category === categoryId));
-        } else {
-          setListProducts(res);
-        }
-      })
-      .catch((error) => console.log(error));
-  }, [categoryId]);*/
-
-  /*console.log("desde el container", productList);*/
 
   return (
     <div>

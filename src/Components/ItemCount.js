@@ -12,7 +12,7 @@ const ItemCount = ({ max, Counter, setCounter, onAdd }) => {
   return (
     <div>
       <div>
-        <h3>Cantidad</h3>
+        <h3>Cantidad :</h3>
         <h2>{Counter}</h2>
         <div class="btn-group" role="group" aria-label="Basic example">
           <button

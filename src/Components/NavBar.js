@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <h6>Diario de una porcion</h6>
-        <img src={logotipo_secundario} alt="" width="30" height="24" />
+        <img src={logotipo_secundario} alt="" width="40" height="35" />
         <button
           className="navbar-toggler"
           type="button"
@@ -55,11 +55,6 @@ const Navbar = () => {
                 <li>
                   <Link className="dropdown-item" to="/category/salados">
                     Salados
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="#">
-                    Regalos
                   </Link>
                 </li>
               </ul>

@@ -7,6 +7,7 @@ import Nosotros from "./Components/Nosotros";
 import Cart from "./Components/Cart";
 import { CartProvider } from "./Components/CartContext";
 import Checkout from "./Components/Checkout";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
             />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
+          <footer>
+            <Footer />
+          </footer>
         </div>
       </BrowserRouter>
     </CartProvider>

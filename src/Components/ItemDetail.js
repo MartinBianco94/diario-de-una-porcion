@@ -33,7 +33,7 @@ const ItemDetail = ({ product }) => {
         />
         <div className="card-body">
           <h1 className="card-title">{product?.name}</h1>
-          <h3> $ {product?.price}</h3>
+          <h5> $ {product?.price}</h5>
           <h5>{product?.description}</h5>
           {!isInCart(product?.id) ? (
             <ItemCount

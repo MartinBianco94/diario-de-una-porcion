@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 
 const Item = (props) => {
   return (
-    <div className="card" style={{ width: "18rem" }}>
+    <div className="product-list card " style={{ width: "18rem" }}>
       <img
         src={props.product.imageUrl}
         className="card-img-top"
+        height="190"
         alt={props.product.name}
       />
       <div className="card-body">
